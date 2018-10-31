@@ -1,2 +1,8 @@
-
-<p>gbhujnhgvf</p> 
+<form class= "myform" >
+<div class="input-form">
+    <input placeholder="Enter github Username" [(ngModel)]="userName" class="form-control" ><br>
+    <br>
+    <button  class="btn btn-primary" (click)="userLookup()">SEARCH</button>
+</div> 
+</form>
+<h3>{{githubData.name}}</h3>
