@@ -4,7 +4,24 @@
       <app-git-forms></app-git-forms>
     </div>
     <div class="col-md-7">
-      <app-git-repository></app-git-repository>
+      <div class="well" id="display">
+        <img [src]="avatarUrl">
+      </div>
+      <div>
+        <h3>{{githubData.name}}</h3><br>
+        <br>
+        <h4>Location: {{githubData.location}}</h4>
+        <br>
+        <h4>Repositories: {{githubData.public_repos}}</h4>
+        <br>
+        <h4>Followers: {{githubData.followers}}</h4>
+        <br>
+        <h4>Following: {{githubData.following}}</h4>
+        <br>
+        <h4><a [href]="githubData.html_url">Go to page:</a></h4>
+
+      </div>
     </div>
+
   </div>
-</div> 
+</div>
