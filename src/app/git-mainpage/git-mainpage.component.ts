@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-git-mainpage',
   templateUrl: './git-mainpage.component.html',
@@ -7,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GitMainpageComponent implements OnInit {
 
-  constructor() { }
+  constructor(){}
 
-  ngOnInit() {
-  }
+ngOnInit() {
 
+}
 }
