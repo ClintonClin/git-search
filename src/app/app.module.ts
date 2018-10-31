@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { GitFormsComponent } from './git-forms/git-forms.component';
 import { GitMainpageComponent } from './git-mainpage/git-mainpage.component';
 import { GitRepositoryComponent } from './git-repository/git-repository.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,9 +18,10 @@ import { GitRepositoryComponent } from './git-repository/git-repository.componen
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
