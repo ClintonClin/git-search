@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { GitFormsComponent } from './git-forms.component';
 
 describe('GitFormsComponent', () => {
