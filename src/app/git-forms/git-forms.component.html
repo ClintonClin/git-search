@@ -1,8 +1,12 @@
-<form class= "myform" >
-<div class="input-form">
-    <input placeholder="Enter github Username" [(ngModel)]="userName" class="form-control" ><br>
+<form class="myform" #gitForms='ngForm' (ngSubmit)='userLookup()'>
+  <div class="input-form">
+    <input id="username" placeholder="Enter github Username" [(ngModel)]="userName" class="form-control" name="username"
+      #usename="ngModel"><br>
+    {{userName}}
     <br>
-    <button  class="btn btn-primary" (click)="userLookup()">SEARCH</button>
-</div> 
+    <button type="submit" class="btn btn-primary">SEARCH</button>
+  </div>
 </form>
-<h3>{{githubData.name}}</h3>
+
+{{userName}}
+{{userData.login}}

@@ -14,17 +14,20 @@ export class GitFormsComponent implements OnInit {
   avatarUrl="./assets/avatar.png";
 
   userLookup(){
-    this.http.get("https://api.github.com/users/"+this.userName+"?access_token="+environment.access_token)
+    this.http.get("https://api.github.com/users/ClintonClin?access_token="+environment.access_token)
     .subscribe(
-      (response:Response)=>{
-        const userData=response.json();
+      (response)=>{
+        const userData=response;
         this.githubData=userData;
-        this.avatarUrl=userData.avatar_url;
+        this.avatarUrl=userData["avatar_url"];
         console.log(userData);
       }
     )
+    console.log("userLookup executed");
+    
     }
   ngOnInit() {
+    
   }
 
 }

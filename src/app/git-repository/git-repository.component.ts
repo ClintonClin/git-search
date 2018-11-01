@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Repo } from '../repo';
-import { User } from '../user';
+// import { Repo } from '../repo';
+// import { User } from '../user';
 @Component({
   selector: 'app-git-repository',
   templateUrl: './git-repository.component.html',
@@ -8,8 +8,8 @@ import { User } from '../user';
 })
 export class GitRepositoryComponent implements OnInit {
 
-  user:User;
-  arrayRepo:Repo[];
+  // user:User;
+  // arrayRepo:Repo[];
 
   constructor() {
   }

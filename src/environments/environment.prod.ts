@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  accessToken: "58af791ec1b29e445033cf5f74f29f7f185bb07f"
+  accessToken: "2ca7c98d9e73f4712c5aea2f5fa711e0024a932f"
 };
