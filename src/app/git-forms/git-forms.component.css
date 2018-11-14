@@ -1,0 +1,20 @@
+.myform{
+
+        font-style: normal;
+        font-size: 20px;
+        font-family: 'Comfortaa', cursive;
+        font-weight: bolder;
+        color: white;
+        border:0px solid #fff;
+        padding:30px 50px;
+        -webkit-box-shadow: 2px 3px 66px 6px rgba(14,240,210,0.55);
+        -moz-box-shadow: 2px 3px 66px 6px rgba(14,240,210,0.55);
+        box-shadow: 2px 3px 66px 6px rgba(14,240,210,0.55);
+        border-radius: 10px 10px 10px 10px;
+        -moz-border-radius: 10px 10px 10px 10px;
+        -webkit-border-radius: 10px 10px 10px 10px;
+        border: 0px solid #000000;
+        margin-top: 20px;
+        margin-right: 20px;
+        
+}

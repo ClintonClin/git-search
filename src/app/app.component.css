@@ -1,5 +1,11 @@
 .jumbotron{
     font-family: 'Changa', sans-serif;
     text-align: center;
-    font-size: 80px;
+    font-size: 100px;
+    color: red;
+    background: #333
+}
+.style{
+    background-color: #333;
+    color: white
 }

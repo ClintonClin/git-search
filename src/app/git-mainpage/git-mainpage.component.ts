@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Dev } from '../dev';
+import { DevRequestService } from './dev-request.service';
 @Component({
   selector: 'app-git-mainpage',
   templateUrl: './git-mainpage.component.html',
@@ -6,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GitMainpageComponent implements OnInit {
 
-  constructor(){}
+  dev: Dev;
 
-ngOnInit() {
+  constructor(private devService: DevRequestService) { }
 
-}
+  ngOnInit() {
+    // this.devService.createUrl();
+    this.devService.devRequest();
+    this.dev = this.devService.dev;
+  }
 }

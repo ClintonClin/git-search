@@ -1,21 +1,5 @@
-<app-git-forms (addUser)='getResponse($event)'>
-  </app-git-forms>
-  <div class="center">
-    <img src="{{user.photoUrl}}" alt="Avatar">
-    <h3 appBolder>{{user.userProfile}}</h3>
-  </div>
-  <p>{{user.bio}}</p>
-  <div class="follow">
-    <button class="btn-info" type="button" name="button">Followers: {{user.followers}}</button>
-    <button class="btn-info following" type="button" name="button">Following: {{user.following}}</button>
-  </div>
-  <br>
-  <div class="center">
-    <button class="btn-danger" type="button" name="button" (click)='toggleRepos()'>Repos:{{user.numRepos}}</button>
-  </div>
-  <br>
-
-  {{user.showRepos}}
-
-  
-
+<div *ngFor='let repo of dev.repo'>
+  <hr>
+  <h4>{{repo.name}}</h4>
+  <p>{{repo.description}}</p>
+</div>

@@ -1,12 +1,16 @@
-<form class="myform" #gitForms='ngForm' (ngSubmit)='userLookup()'>
+<form class="myform">
   <div class="input-form">
-    <input id="username" placeholder="Enter github Username" [(ngModel)]="userName" class="form-control" name="username"
-      #usename="ngModel"><br>
-    {{userName}}
+    <input id="search" type="text" name="search" class="form-control" placeholder="search" #search>
     <br>
-    <button type="submit" class="btn btn-primary">SEARCH</button>
+    <button type="submit" class="btn btn-primary" (click)="searcher(search.value)">SEARCH</button>
+  </div>
+  <div>
+    <img src={{dev.image}}>
+    <h1>{{dev.name}}</h1>
+  </div>
+  <div *ngFor='let repo of dev.repo'>
+    <hr>
+    <h4>{{repo.name}}</h4>
+    <p>{{repo.description}}</p>
   </div>
 </form>
-
-{{userName}}
-{{userData.login}}

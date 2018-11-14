@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import { Repo } from '../repo';
-// import { User } from '../user';
+import { Dev } from '../dev';
+import { DevRequestService } from '../git-mainpage/dev-request.service';
 @Component({
   selector: 'app-git-repository',
   templateUrl: './git-repository.component.html',
@@ -8,13 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GitRepositoryComponent implements OnInit {
 
-  // user:User;
-  // arrayRepo:Repo[];
-
-  constructor() {
-  }
+  dev: Dev;
+  constructor(private devService: DevRequestService) { }
 
   ngOnInit() {
+    this.devService.userRepoRequest();
+    this.dev = this.devService.dev;
   }
 
 }
