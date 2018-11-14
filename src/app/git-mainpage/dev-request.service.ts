@@ -29,7 +29,7 @@ export class DevRequestService {
     }
 
   const promise = new Promise((resolve, reject) => {
-      this.http.get<ApiResponse>("https://api.github.com/users/ClintonClin?accessntoken=" + environment.apiKey).toPromise().then(response => {
+      this.http.get<ApiResponse>('https://api.github.com/users/ClintonClin?accessntoken=bc57b1ace837a05bd2aadc5dc46d369ea968d5cd').toPromise().then(response => {
       this.dev.name = response.login;
       this.dev.image = response.avatar_url;
       this.dev.repo_url = response.repo_url;
@@ -41,16 +41,15 @@ export class DevRequestService {
 
 
       resolve();
-    },
+    }),
     error => {
       this.dev.name = 'Experiencing some tech difficulties';
 
       reject(error);
-    });
-    });
+    };
     return promise;
-  }
-
+  });
+};
 //   userRepoRequest() {
 //     interface RepoResponse {
 //       repo_url: any;
