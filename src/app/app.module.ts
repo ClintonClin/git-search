@@ -7,14 +7,14 @@ import { GitFormsComponent } from './git-forms/git-forms.component';
 import { GitMainpageComponent } from './git-mainpage/git-mainpage.component';
 import { GitRepositoryComponent } from './git-repository/git-repository.component';
 import { HttpClientModule } from '@angular/common/http';
-import { DevComponent } from './dev/dev.component';
-import { RepoComponent } from './repo/repo.component';
+import { DateCountPipe } from './date-count.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     GitFormsComponent,
     GitMainpageComponent,
-    GitRepositoryComponent
+    GitRepositoryComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,

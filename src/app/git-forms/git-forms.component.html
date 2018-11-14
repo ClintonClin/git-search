@@ -1,8 +1,8 @@
 <form class="myform">
   <div class="input-form">
-    <input id="search" type="text" name="search" class="form-control" placeholder="search" #search>
+    <input id="input" type="text" name="search" class="form-control" placeholder="search" #search>
     <br>
-    <button type="submit" class="btn btn-primary" (click)="searcher(search.value)">SEARCH</button>
+    <button type="submit" class="btn btn-primary" (click)="searcher(input.value)">SEARCH</button>
   </div>
   <div>
     <img src={{dev.image}}>

@@ -11,20 +11,19 @@ import { Dev } from '../dev';
 })
 export class GitFormsComponent implements OnInit {
   // const repo = new Repo();
-   dev = new Dev('', '', '');
+  dev = new Dev('', '', '', '', 0, 0, 0, 0);
   constructor(private http: HttpClient) { }
 
   searcher(search: string) {
     const x = 'https://api.github.com/users/' + search;
     this.http.get(x).subscribe(answer => {
       // console.log(answer);
-      this.dev.name = answer.login;
-      this.dev.image = answer.avatar_url;
+      this.dev.name = name;
     });
-    const y = 'https://api.github.com/users/' + search + '/repos';
-    this.http.get(y).subscribe(data => {
-      this.dev.repo = data;
-    });
+    // const y = 'https://api.github.com/users/' + search + '/repos';
+    // this.http.get(y).subscribe(data => {
+    //   this.dev.repos = data;
+    // });
   }
   ngOnInit() {
   }

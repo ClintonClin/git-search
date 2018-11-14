@@ -12,8 +12,8 @@ export class GitRepositoryComponent implements OnInit {
   constructor(private devService: DevRequestService) { }
 
   ngOnInit() {
-    this.devService.userRepoRequest();
-    this.dev = this.devService.dev;
+    // this.devService.userRepoRequest();
+    // this.dev = this.devService.dev;
   }
 
 }

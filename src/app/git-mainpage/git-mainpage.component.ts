@@ -11,7 +11,7 @@ export class GitMainpageComponent implements OnInit {
   dev: Dev;
 
   constructor(private devService: DevRequestService) { }
-
+  search:string
   ngOnInit() {
     // this.devService.createUrl();
     this.devService.devRequest();
