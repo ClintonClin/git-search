@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
 import { DevRequestService } from '../git-mainpage/dev-request.service';
 import { Repo } from '../repo';
 import { Dev } from '../dev';
