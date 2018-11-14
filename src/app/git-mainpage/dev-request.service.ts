@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Dev } from '../dev';
-import { GitFormsComponent} from '../git-forms/git-forms.component';
+import { Response } from '@angular/http';
+import { environment } from '../../environments/environment';
+import { Repo } from '../repo';
 
 
 @Injectable({
@@ -14,6 +16,7 @@ export class DevRequestService {
   constructor(private http: HttpClient) {
   this.dev = new Dev('', '', '', '', 0, 0, 0, 0); }
 
+    private search = "";
 
   devRequest() {
     interface ApiResponse {
@@ -28,7 +31,7 @@ export class DevRequestService {
     }
 
   const promise = new Promise((resolve, reject) => {
-      this.http.get<ApiResponse>('https://api.github.com/users/ClintonClin?accessntoken=bc57b1ace837a05bd2aadc5dc46d369ea968d5cd').toPromise().then(response => {
+      this.http.get<ApiResponse>('https://api.github.com/users/ClintonClin?accessntoken=cb327c777eff937591311a292e4721e661dd2c7f').toPromise().then(response => {
       this.dev.name = response.login;
       this.dev.image = response.avatar_url;
       this.dev.repo_url = response.repo_url;

@@ -8,13 +8,15 @@ import { GitMainpageComponent } from './git-mainpage/git-mainpage.component';
 import { GitRepositoryComponent } from './git-repository/git-repository.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DateCountPipe } from './date-count.pipe';
+import { BoldDirective } from './bold.directive';
 @NgModule({
   declarations: [
     AppComponent,
     GitFormsComponent,
     GitMainpageComponent,
     GitRepositoryComponent,
-    DateCountPipe
+    DateCountPipe,
+    BoldDirective
   ],
   imports: [
     BrowserModule,

@@ -19,10 +19,10 @@ export class GitFormsComponent implements OnInit {
       // console.log(answer);
       this.dev.name = name;
     });
-    // const y = 'https://api.github.com/users/' + search + '/repos';
-    // this.http.get(y).subscribe(data => {
-    //   this.dev.repos = data;
-    // });
+    const y = 'https://api.github.com/users/' + search + '/repos';
+    this.http.get(y).subscribe(data => {
+    this.dev.repos = parseInt('data');
+    });
   }
   ngOnInit() {
   }
